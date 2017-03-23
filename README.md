@@ -7,6 +7,10 @@ Here is the [PhP agnostic SDK](https://github.com/idealley/cloudcms-sdk)
 
 `composer require idealley/cloudcms-laravel`
 
+Require the provider in `config/app.php`
+
+`Idealley\CloudCms\CloudCmsServiceProvider::class,`
+
 Publish the config with the command 
 
 `php artisan vendor:publish`
