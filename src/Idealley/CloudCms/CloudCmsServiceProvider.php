@@ -1,4 +1,6 @@
-<?php namespace Idealley\CloudCms;
+<?php 
+
+namespace Idealley\CloudCms;
 
 use Idealley\CloudCmsSDK\ClientBase;
 use Illuminate\Support\ServiceProvider;
@@ -12,8 +14,6 @@ class CloudCmsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        include __DIR__.'/../../routes.php';
-
         $this->publishes([
             __DIR__.'/../../config/config.php' => config_path('cloudcms.php'),
         ]);
@@ -26,8 +26,8 @@ class CloudCmsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app['cloudcms'] = $this->app->share(function($app)
-        {
+        $this->app->singleton('cloudcms',function($app)
+       	{
             return new ClientBase(  
                 config('cloudcms.clientKey'),
                 config('cloudcms.clientSecret'),
@@ -48,6 +48,5 @@ class CloudCmsServiceProvider extends ServiceProvider
             $loader->alias('CC','Idealley\CloudCms\Facades\CloudCms');
         });
 
-       // $this->app->make('Idealley\CloudCms\ProxyController');
     }
 }

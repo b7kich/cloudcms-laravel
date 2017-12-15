@@ -10,7 +10,8 @@
     ],
     "require": {
         "php": ">=5.6.0",
-        "idealley/cloudcms-sdk": ">=1.0.0"
+        "idealley/cloudcms-sdk": ">=1.0.0",
+	"laravel/framework": "^5.4"
     },
     "autoload": {
         "psr-4": {

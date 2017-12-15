@@ -13,10 +13,11 @@ class CloudCms extends Facade {
     /**
      * Get the root object behind the facade.
      *
-     * @return \Incraigulous\ContentfulSDK\ManagementSDK
+     * @return \Idealley\CloudCmsSDK\ClientBase
      */
     public static function getFacadeRoot()
     {
         return static::resolveFacadeInstance(static::getFacadeAccessor());
     }
+
 }
