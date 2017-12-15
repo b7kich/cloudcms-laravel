@@ -14,8 +14,6 @@ class CloudCmsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        include __DIR__.'/../../routes.php';
-
         $this->publishes([
             __DIR__.'/../../config/config.php' => config_path('cloudcms.php'),
         ]);
@@ -50,6 +48,5 @@ class CloudCmsServiceProvider extends ServiceProvider
             $loader->alias('CC','Idealley\CloudCms\Facades\CloudCms');
         });
 
-       // $this->app->make('Idealley\CloudCms\ProxyController');
     }
 }
