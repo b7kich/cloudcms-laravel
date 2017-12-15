@@ -66,10 +66,13 @@ You can chain any params as per [the documentation](https://www.cloudcms.com/doc
 
 Do not forget to add these values in your .env file
 
-        CC_CLIENT_KEY=
-        CC_CLIENT_SECRET=
-        CC_USERNAME=
-        CC_PASSWORD= 
-        CC_CLIENT_KEY=
-        CC_TOKEN_STORAGE_PATH=/storage/token
-        CC_DEPLOYMENT_URL=                                       
+	CC_CLIENT_KEY=
+	CC_CLIENT_SECRET=
+	CC_USERNAME=
+	CC_PASSWORD=
+	CC_REPOSITORY_ID=
+	CC_BRANCH=
+	CC_DEPLOYMENT_URL=
+	CC_TOKEN_STORAGE_PATH='storage/token'
+	CC_BASE_URL='https://api.cloudcms.com'
+

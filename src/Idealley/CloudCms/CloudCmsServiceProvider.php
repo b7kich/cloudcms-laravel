@@ -1,4 +1,6 @@
-<?php namespace Idealley\CloudCms;
+<?php 
+
+namespace Idealley\CloudCms;
 
 use Idealley\CloudCmsSDK\ClientBase;
 use Illuminate\Support\ServiceProvider;
@@ -26,8 +28,8 @@ class CloudCmsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app['cloudcms'] = $this->app->share(function($app)
-        {
+        $this->app->singleton('cloudcms',function($app)
+       	{
             return new ClientBase(  
                 config('cloudcms.clientKey'),
                 config('cloudcms.clientSecret'),
