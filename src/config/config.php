@@ -35,10 +35,11 @@ return array(
     | Get this from the Cloud CMS Developers API keys menu item (per project) 
     |
     */    
-    'redirectUri'   => '',
-    'deploymentUrl' => '',
-    'repositoryId'  => '',
-    'branch'        => '',
+    'redirectUri'   => env('CC_REPOSITORY_ID', ''),
+    'deploymentUrl' => env('CC_DEPLOYMENT_URL', ''),
+    'repositoryId'  => env('CC_REDIRECT_URI', ''),
+    'branch'        => env('CC_BRANCH', ''),
+
 
     /*
     |--------------------------------------------------------------------------
@@ -48,7 +49,7 @@ return array(
     | The base url of Cloud CMS API  (urlResourceOwnerDetails)
     |
     */
-    'baseUrl'  => 'https://api.cloudcms.com',
+    'baseUrl'  => env('CC_BASE_URL','https://api.cloudcms.com'),
 
     /*
     |--------------------------------------------------------------------------
